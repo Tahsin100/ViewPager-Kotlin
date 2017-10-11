@@ -17,7 +17,6 @@ class CustomPagerAdapter(fm: FragmentManager?) : FragmentStatePagerAdapter(fm) {
 
     private val NUM_PAGES = 3
     override fun getItem(position: Int): Fragment? {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 
         when(position) {
             0 ->
