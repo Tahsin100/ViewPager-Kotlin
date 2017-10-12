@@ -18,22 +18,37 @@ class CustomPagerAdapter(fm: FragmentManager?) : FragmentStatePagerAdapter(fm) {
     private val NUM_PAGES = 3
     override fun getItem(position: Int): Fragment? {
 
-        when(position) {
+        return when(position) {
             0 ->
-                return ViewpagerFragment1()
+                ViewpagerFragment1()
             1 ->
-                return ViewpagerFragment2()
+                ViewpagerFragment2()
             2 ->
-                return ViewpagerFragment3()
+                ViewpagerFragment3()
             else ->
-                return null
+                null
         }
 
 
     }
 
+
+    override fun getPageTitle(position: Int): CharSequence {
+        var title = ""
+        when(position){
+            0 ->
+                title = "Page1"
+            1 ->
+                title = "Page2"
+            2 ->
+                title = "Page3"
+
+        }
+
+        return title
+    }
+
     override fun getCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         return NUM_PAGES
     }
 

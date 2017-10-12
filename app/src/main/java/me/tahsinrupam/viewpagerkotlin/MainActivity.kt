@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBar.NAVIGATION_MODE_TABS
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 import me.tahsinrupam.viewpagerkotlin.adapters.CustomPagerAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -15,11 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val adapter = CustomPagerAdapter(supportFragmentManager)
-        viewPager.adapter = adapter
-        val tabs = arrayOf("Page1","Page2", "Page3")
-        repeat(tabs.size) { i ->
-            acti
-        }
+        viewpager.adapter = adapter
+        tabLayout.setupWithViewPager(viewpager)
     }
 
 }
